@@ -112,10 +112,274 @@
 
     </main>
 
-    <footer id="contact">
-        <p>&copy; 2026 Aura Fragrances. All rights reserved.</p>
-        <p>Email: hello@aurafragrances.com | Phone: 1-800-PERFUME</p>
-    </footer>
+    <style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
 
+body{
+    background: linear-gradient(to right, #f8e1f4, #e6d5ff);
+    color:#333;
+}
+
+/* Navigation */
+nav{
+    background-color:#6a0dad;
+    padding:20px;
+}
+
+nav ul{
+    display:flex;
+    justify-content:center;
+    list-style:none;
+    gap:40px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-size:18px;
+    font-weight:bold;
+}
+
+nav ul li a:hover{
+    color:#ffd700;
+}
+
+/* Hero Section */
+.hero{
+    text-align:center;
+    padding:60px 20px;
+}
+
+.hero h1{
+    font-size:50px;
+    color:#6a0dad;
+}
+
+.hero p{
+    font-size:20px;
+    margin-top:15px;
+}
+
+/* Table Section */
+.table-section{
+    padding:40px;
+}
+
+.table-section h2{
+    text-align:center;
+    margin-bottom:20px;
+    color:#6a0dad;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th{
+    background-color:#6a0dad;
+    color:white;
+    padding:15px;
+}
+
+td{
+    padding:15px;
+    text-align:center;
+}
+
+tr:nth-child(even){
+    background-color:#f3d9ff;
+}
+
+tr:nth-child(odd){
+    background-color:#ffffff;
+}
+
+td:hover{
+    background-color:#ffe4e1;
+}
+
+/* Image Grid */
+.gallery{
+    padding:40px;
+}
+
+.gallery h2{
+    text-align:center;
+    margin-bottom:20px;
+    color:#6a0dad;
+}
+
+.image-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.image-grid img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+    border-radius:10px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Video Grid */
+.video-section{
+    padding:40px;
+}
+
+.video-section h2{
+    text-align:center;
+    margin-bottom:20px;
+    color:#6a0dad;
+}
+
+.video-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.video-grid video{
+    width:100%;
+    border-radius:10px;
+}
+
+/* Footer */
+footer{
+    background-color:#6a0dad;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:30px;
+}
+
+@media(max-width:768px){
+
+.image-grid,
+.video-grid{
+    grid-template-columns:1fr;
+}
+
+.hero h1{
+    font-size:35px;
+}
+}
+</style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav>
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">Products</a></li>
+<li><a href="#">Gallery</a></li>
+<li><a href="#">Videos</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero">
+<h1>Lux Perfume</h1>
+<p>Experience luxury, elegance and long-lasting fragrance.</p>
+</section>
+
+<!-- Table Section -->
+<section class="table-section">
+<h2>Lux Perfume Collection</h2>
+
+<table border="1">
+<tr>
+<th>Perfume Name</th>
+<th>Category</th>
+<th>Size</th>
+<th>Price</th>
+</tr>
+
+<tr>
+<td>Lux Gold</td>
+<td>Luxury</td>
+<td>100ml</td>
+<td>$120</td>
+</tr>
+
+<tr>
+<td>Lux Rose</td>
+<td>Floral</td>
+<td>75ml</td>
+<td>$90</td>
+</tr>
+
+<tr>
+<td>Lux Midnight</td>
+<td>Woody</td>
+<td>100ml</td>
+<td>$140</td>
+</tr>
+
+<tr>
+<td>Lux Ocean</td>
+<td>Fresh</td>
+<td>50ml</td>
+<td>$80</td>
+</tr>
+
+<tr>
+<td>Lux Elite</td>
+<td>Premium</td>
+<td>120ml</td>
+<td>$180</td>
+</tr>
+</table>
+</section>
+
+<!-- Image Grid -->
+<section class="gallery">
+<h2>Perfume Gallery</h2>
+
+<div class="image-grid">
+<img src="https://images.unsplash.com/photo-1541643600914-78b084683601" alt="Perfume">
+<img src="https://images.unsplash.com/photo-1594035910387-fea47794261f" alt="Perfume">
+<img src="https://images.unsplash.com/photo-1523293182086-7651a899d37f" alt="Perfume">
+<img src="https://images.unsplash.com/photo-1615634260167-c8cdede054de" alt="Perfume">
+</div>
+</section>
+
+<!-- Video Grid -->
+<section class="video-section">
+<h2>Perfume Videos</h2>
+
+<div class="video-grid">
+
+<video controls>
+<source src="video1.mp4" type="video/mp4">
+</video>
+
+<video controls>
+<source src="video2.mp4" type="video/mp4">
+</video>
+
+<video controls>
+<source src="video3.mp4" type="video/mp4">
+</video>
+
+<video controls>
+<source src="video4.mp4" type="video/mp4">
+</video>
+
+</div>
+</section>
+
+<footer>
+<p>&copy; 2026 Lux Perfume. All Rights Reserved.</p>
+</footer>
 </body>
 </html>
