@@ -15,12 +15,9 @@ window.onload = function(){
 
 function closeWelcome(){
 
-    document.getElementById("welcomeBox").style.display="none";
+    document.getElementById("welcomeBox").style.display = "none";
 
 }
-;
-}
-
 
 // Form Validation
 function validateForm(){
