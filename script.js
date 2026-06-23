@@ -3,8 +3,6 @@ window.onload = function(){
 };
 
 
-function closePopup(){
-    document.getElementById("welcomePopup").style.display = "none";
 }
 
 // Show popup automatically when website opens
@@ -13,9 +11,14 @@ window.onload = function(){
 };
 
 
-// Close popup function
-function closePopup(){
-    document.getElementById("welcomePopup").style.display = "none";
+// Close popup
+
+function closeWelcome(){
+
+    document.getElementById("welcomeBox").style.display="none";
+
+}
+;
 }
 
 
