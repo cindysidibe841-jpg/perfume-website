@@ -1,5 +1,10 @@
 function welcomeMessage(){
-    alert("✨ Welcome to Lux Perfume Website! ✨\n\nDiscover luxury, elegance and long-lasting fragrances.");
+    document.getElementById("welcomePopup").style.display = "block";
+}
+
+
+function closePopup(){
+    document.getElementById("welcomePopup").style.display = "none";
 }
 
 
