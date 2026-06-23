@@ -168,45 +168,197 @@ audio {
 
 
 /* Registration Form */
-form {
-    width: 60%;
-    margin: 30px auto;
-    background:white;
-    padding:30px;
-    border-radius:15px;
-    box-shadow:0 5px 20px rgba(0,0,0,0.2);
+/* Welcome Popup */
+
+#welcomeBox{
+
+display:flex;
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background:rgba(0,0,0,0.6);
+
+align-items:center;
+justify-content:center;
+
+z-index:1000;
+
 }
 
 
-form label {
-    font-weight:bold;
-    color:#6a0dad;
+
+#welcomeBox .box{
+
+background:white;
+
+padding:35px;
+
+width:320px;
+
+text-align:center;
+
+border-radius:15px;
+
+box-shadow:0 10px 30px rgba(0,0,0,0.4);
+
 }
 
 
-input, select {
-    width:100%;
-    padding:12px;
-    margin-top:8px;
-    border:1px solid #aaa;
-    border-radius:8px;
+
+#welcomeBox p{
+
+font-size:18px;
+
+margin-bottom:20px;
+
 }
 
 
-input[type="submit"] {
-    background:#6a0dad;
-    color:white;
-    border:none;
-    cursor:pointer;
-    font-size:18px;
-    font-weight:bold;
+
+#welcomeBox button{
+
+background:#6a0dad;
+
+color:white;
+
+border:none;
+
+padding:12px 25px;
+
+border-radius:25px;
+
+cursor:pointer;
+
 }
 
 
-input[type="submit"]:hover {
-    background:#4b087d;
+
+
+#welcomeBox button:hover{
+
+background:#4b087d;
+
 }
 
+
+
+
+/* Registration Card */
+
+#regCard{
+
+background:white;
+
+max-width:480px;
+
+margin:40px auto;
+
+padding:35px;
+
+border-radius:15px;
+
+box-shadow:0 8px 25px rgba(0,0,0,0.2);
+
+}
+
+
+
+#regCard h2{
+
+text-align:center;
+
+color:#6a0dad;
+
+}
+
+
+
+#regCard label{
+
+display:block;
+
+margin-top:15px;
+
+font-weight:bold;
+
+}
+
+
+
+#regCard input{
+
+width:100%;
+
+padding:12px;
+
+margin-top:5px;
+
+border:1px solid #ccc;
+
+border-radius:8px;
+
+}
+
+
+
+#regCard button{
+
+width:100%;
+
+margin-top:25px;
+
+background:#6a0dad;
+
+color:white;
+
+border:none;
+
+padding:14px;
+
+border-radius:8px;
+
+font-size:16px;
+
+cursor:pointer;
+
+}
+
+
+
+.error{
+
+display:none;
+
+color:red;
+
+font-size:13px;
+
+}
+
+
+
+#successMsg{
+
+display:none;
+
+margin-top:15px;
+
+padding:12px;
+
+background:#e8f3ec;
+
+color:#6a0dad;
+
+border-radius:8px;
+
+text-align:center;
+
+}
 
 /* Footer */
 footer {
