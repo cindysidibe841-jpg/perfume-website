@@ -19,30 +19,26 @@ function validateForm(){
 
 
     if(name == ""){
-        alert("⚠️ Please enter your name");
+        alert("Please enter your name");
         return false;
     }
-
 
     if(!emailPattern.test(email)){
-        alert("⚠️ Enter a valid email like cindysidibe841@gmail.com");
+        alert("Enter a valid email");
         return false;
     }
-
 
     if(phone == ""){
-        alert("⚠️ Please enter your phone number");
+        alert("Please enter your phone number");
         return false;
     }
-
 
     if(gender == ""){
-        alert("⚠️ Please select gender");
+        alert("Please select gender");
         return false;
     }
 
-
-    alert("🌸 Thank you " + name + "!\n\nYour registration was submitted successfully.\nWelcome to Lux Perfume!");
-    
+    alert("Form Submitted Successfully!");
     return true;
+}
 }
