@@ -397,187 +397,226 @@ footer {
     }
 
 /* =========================
-   Welcome Popup Styling
+   Popup Styling
 ========================= */
 
-.popup {
-    display: none; /* Hidden until JavaScript opens it */
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.65);
+#welcomeBox {
+    display:flex;
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:rgba(0,0,0,0.65);
+
+    align-items:center;
+    justify-content:center;
+
+    z-index:1000;
 }
 
 
-/* Popup Box */
-.popup-content {
-    background: linear-gradient(135deg, #f8e1f4, #e6d5ff);
-    width: 420px;
-    max-width: 90%;
-    padding: 40px;
-    border-radius: 20px;
-    text-align: center;
+#welcomeBox .box {
 
-    position: absolute;
-    top: 50%;
-    left: 50%;
+    background:linear-gradient(135deg,#f8e1f4,#e6d5ff);
 
-    transform: translate(-50%, -50%);
+    width:350px;
+    max-width:90%;
 
-    box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+    padding:35px;
 
-    animation: popupShow 0.5s ease-in-out;
+    text-align:center;
+
+    border-radius:20px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,0.4);
+
+    animation:popupAnimation 0.5s ease;
 }
 
 
-/* Popup Heading */
-.popup-content h2 {
-    color: #6a0dad;
-    font-size: 30px;
-    margin-bottom: 15px;
+#welcomeBox p:first-child {
+
+    color:#6a0dad;
+
+    font-size:26px;
+
+    font-weight:bold;
+
+}
+
+
+#welcomeBox p {
+
+    color:#333;
+
+    font-size:17px;
+
+    margin-bottom:20px;
+
 }
 
 
-/* Popup Paragraph */
-.popup-content p {
-    color: #333;
-    font-size: 18px;
-    margin-bottom: 25px;
-}
+#welcomeBox button {
 
+    background:#6a0dad;
 
-/* Close Button */
-.close {
-    position: absolute;
-    top: 10px;
-    right: 20px;
+    color:white;
 
-    font-size: 35px;
-    font-weight: bold;
+    border:none;
 
-    color: #6a0dad;
-    cursor: pointer;
-}
+    padding:12px 30px;
 
+    border-radius:30px;
 
-.close:hover {
-    color: #4b087d;
-}
+    font-size:16px;
 
+    font-weight:bold;
 
-/* Explore Button */
-.popup-content button {
+    cursor:pointer;
 
-    background: #6a0dad;
-    color: white;
-
-    border: none;
-    padding: 12px 30px;
-
-    border-radius: 30px;
-
-    font-size: 17px;
-    font-weight: bold;
-
-    cursor: pointer;
-
-    transition: 0.3s;
-}
-
-
-.popup-content button:hover {
-
-    background: #4b087d;
-    transform: scale(1.05);
+    transition:0.3s;
 
 }
+
+
+#welcomeBox button:hover {
+
+    background:#4b087d;
+
+    transform:scale(1.05);
+
+}
+
 
 
 /* Popup Animation */
-@keyframes popupShow {
 
-    from {
-        opacity: 0;
-        transform: translate(-50%, -60%);
-    }
-
-
-    to {
-        opacity: 1;
-        transform: translate(-50%, -50%);
-    }
-
-}
-
-
-/* Mobile Responsive */
-@media(max-width:600px){
-
-    .popup-content{
-        width: 90%;
-        padding: 30px;
-    }
-
-
-    .popup-content h2{
-        font-size:24px;
-    }
-
-
-    .popup-content p{
-        font-size:16px;
-    }
-
-}
-
-
-/* Close Button */
-.close {
-    position: absolute;
-    right: 20px;
-    top: 10px;
-    font-size: 30px;
-    color: #6a0dad;
-    cursor: pointer;
-}
-
-
-.popup-content button {
-    background:#6a0dad;
-    color:white;
-    border:none;
-    padding:12px 25px;
-    border-radius:25px;
-    cursor:pointer;
-    font-size:16px;
-}
-
-
-.popup-content button:hover {
-    background:#4b087d;
-}
-
-
-/* Animation */
 @keyframes popupAnimation {
 
     from {
-        transform: translate(-50%, -60%);
+
         opacity:0;
+
+        transform:translateY(-50px);
+
     }
 
+
     to {
-        transform: translate(-50%, -50%);
+
         opacity:1;
+
+        transform:translateY(0);
+
     }
 
 }
 
 
-    header h1 {
-        font-size:32px;
+
+/* Registration Error Messages */
+
+.error {
+
+    display:none;
+
+    color:red;
+
+    font-size:13px;
+
+}
+
+
+#successMsg {
+
+    display:none;
+
+    margin-top:15px;
+
+    padding:12px;
+
+    background:#e8f3ec;
+
+    color:#6a0dad;
+
+    border-radius:8px;
+
+    text-align:center;
+
+}
+
+
+
+/* Mobile Responsive */
+
+@media(max-width:768px){
+
+
+    nav ul {
+
+        flex-direction:column;
+
+        align-items:center;
+
     }
+
+
+    .image-gallery,
+    .image-grid,
+    .video-container {
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    section {
+
+        width:95%;
+
+        padding:25px;
+
+    }
+
+
+    form {
+
+        width:90%;
+
+    }
+
+
+    header h1 {
+
+        font-size:32px;
+
+    }
+
+
+}
+
+
+
+@media(max-width:600px){
+
+
+    #welcomeBox .box {
+
+        width:85%;
+
+        padding:25px;
+
+    }
+
+
+    #welcomeBox p:first-child {
+
+        font-size:22px;
+
+    }
+
 }
