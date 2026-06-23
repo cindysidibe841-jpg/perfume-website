@@ -244,44 +244,141 @@ footer {
         width:90%;
     }
 
-    /* Popup Background */
+/* =========================
+   Welcome Popup Styling
+========================= */
+
 .popup {
-    display: none;
+    display: none; /* Hidden until JavaScript opens it */
     position: fixed;
-    z-index: 999;
+    z-index: 1000;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.6);
+    background: rgba(0, 0, 0, 0.65);
 }
 
 
 /* Popup Box */
 .popup-content {
-    background: linear-gradient(to right, #f8e1f4, #e6d5ff);
-    width: 400px;
+    background: linear-gradient(135deg, #f8e1f4, #e6d5ff);
+    width: 420px;
+    max-width: 90%;
     padding: 40px;
     border-radius: 20px;
     text-align: center;
+
     position: absolute;
     top: 50%;
     left: 50%;
+
     transform: translate(-50%, -50%);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-    animation: popupAnimation 0.5s ease;
+
+    box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+
+    animation: popupShow 0.5s ease-in-out;
 }
 
 
+/* Popup Heading */
 .popup-content h2 {
     color: #6a0dad;
+    font-size: 30px;
     margin-bottom: 15px;
 }
 
 
+/* Popup Paragraph */
 .popup-content p {
+    color: #333;
     font-size: 18px;
     margin-bottom: 25px;
+}
+
+
+/* Close Button */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+
+    font-size: 35px;
+    font-weight: bold;
+
+    color: #6a0dad;
+    cursor: pointer;
+}
+
+
+.close:hover {
+    color: #4b087d;
+}
+
+
+/* Explore Button */
+.popup-content button {
+
+    background: #6a0dad;
+    color: white;
+
+    border: none;
+    padding: 12px 30px;
+
+    border-radius: 30px;
+
+    font-size: 17px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.popup-content button:hover {
+
+    background: #4b087d;
+    transform: scale(1.05);
+
+}
+
+
+/* Popup Animation */
+@keyframes popupShow {
+
+    from {
+        opacity: 0;
+        transform: translate(-50%, -60%);
+    }
+
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+
+}
+
+
+/* Mobile Responsive */
+@media(max-width:600px){
+
+    .popup-content{
+        width: 90%;
+        padding: 30px;
+    }
+
+
+    .popup-content h2{
+        font-size:24px;
+    }
+
+
+    .popup-content p{
+        font-size:16px;
+    }
+
 }
 
 
