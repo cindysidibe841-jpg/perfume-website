@@ -1,3 +1,12 @@
+window.onload = function(){
+    document.getElementById("welcomePopup").style.display = "block";
+};
+
+
+function closePopup(){
+    document.getElementById("welcomePopup").style.display = "none";
+}
+
 // Show popup automatically when website opens
 window.onload = function(){
     document.getElementById("welcomePopup").style.display = "block";
