@@ -1,6 +1,7 @@
 function welcomeMessage(){
-    alert("Welcome to Lux Perfume Website!");
+    alert("✨ Welcome to Lux Perfume Website! ✨\n\nDiscover luxury, elegance and long-lasting fragrances.");
 }
+
 
 function validateForm(){
 
@@ -11,26 +12,32 @@ function validateForm(){
 
     let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+
     if(name == ""){
-        alert("Please enter your name");
+        alert("⚠️ Please enter your name");
         return false;
     }
+
 
     if(!emailPattern.test(email)){
-        alert("Enter a valid email like cindysidibe841@gmail.com");
+        alert("⚠️ Enter a valid email like cindysidibe841@gmail.com");
         return false;
     }
+
 
     if(phone == ""){
-        alert("Please enter your phone number");
+        alert("⚠️ Please enter your phone number");
         return false;
     }
+
 
     if(gender == ""){
-        alert("Please select gender");
+        alert("⚠️ Please select gender");
         return false;
     }
 
-    alert("Form Submitted Successfully!");
+
+    alert("🌸 Thank you " + name + "!\n\nYour registration was submitted successfully.\nWelcome to Lux Perfume!");
+    
     return true;
 }
